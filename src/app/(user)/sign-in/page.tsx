@@ -9,10 +9,11 @@ import toast from 'react-hot-toast'
 const page = () => {
   const[email , setEmail] = useState("");
    const[password , setPassword] = useState("");
+   const [isAdmin , setIsAdmin] = useState<boolean>(false);
 
    const onSubmit = () => {
     try {
-     console.log(email , password);
+     console.log(email , password , isAdmin);
      
     } catch (error) {
        console.log(error);
@@ -34,6 +35,11 @@ const page = () => {
    
           <Input type='email' value={email} placeholder='E-Mail' name='email' onChange={(e) => setEmail(e.target.value)}  />
           <Input type='password' value={password} placeholder='Password' name='password' onChange={(e) => setPassword(e.target.value)}  />
+
+          <div className='px-4 py-1 gap-x-2 flex items-center' >
+            <label htmlFor="">Admin</label>
+            <input type="checkbox" className='border-[3px] rounded-lg px-5' checked={isAdmin} onChange={() => setIsAdmin(!isAdmin)} />
+          </div>
 
           <div className='flex gap-2 flex-col justify-center items-center'>
             <button

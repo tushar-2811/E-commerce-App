@@ -11,11 +11,12 @@ const page = () => {
    const[name , setName] = useState("");
    const[email , setEmail] = useState("");
    const[password , setPassword] = useState("");
+   const[isAdmin , setIsAdmin] = useState<boolean>(false);
 
    
    const onSubmit = () => {
        try {
-        console.log(name , email , password);
+        console.log(name , email , password , isAdmin);
         
        } catch (error) {
           console.log(error);
@@ -38,6 +39,12 @@ const page = () => {
           <Input type='text' placeholder='Name' value={name}  name='name' onChange={(e) => setName(e.target.value)}  />
           <Input type='email' placeholder='E-Mail' value={email} name='email' onChange={(e) =>  setEmail(e.target.value)}  />
           <Input type='password' placeholder='Password' value={password} name='password' onChange={(e) => setPassword(e.target.value)}  />
+
+          <div className='px-4 py-1 gap-x-2 flex items-center' >
+            <label htmlFor="">Join as Admin</label>
+            <input type="checkbox" className='border-[3px] rounded-lg px-5' checked={isAdmin} onChange={() => setIsAdmin(!isAdmin)}  />
+          </div>
+
 
           <div className='flex gap-2 flex-col justify-center items-center'>
             <button

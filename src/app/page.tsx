@@ -4,9 +4,8 @@ export default function Home() {
   return (
     <>
      <div>
-       <div>
-        <CategoriesList/>
-       </div>
+      
+       
      </div>
     
     </>

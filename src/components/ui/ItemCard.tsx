@@ -12,7 +12,7 @@ interface ItemCardProps {
      ItemName : string;
      ItemBrand : string;
      ItemColor : string;
-     preferedGender : string;
+     PreferedGender : string;
      ItemPrice : number;
      AvailableSizes : number[];
      isInStock : boolean

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MenuBar = () => {
+const page = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const MenuBar = () => {
   )
 }
 
-export default MenuBar
+export default page

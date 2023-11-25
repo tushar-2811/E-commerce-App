@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/layout/Navbar'
+import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import CategoriesList from '@/components/Categories/CategoriesList'
 import { Toaster } from 'react-hot-toast'
@@ -22,8 +22,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Toaster/>
-        <div className=' min-h-screen flex flex-col'>
-          <Navbar/>
+          <div >
+         <Header/>
 
           <div className='flex-auto' >
           {children}
