@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemCard from '@/components/ui/ItemCard'
+
 
 interface Params {
     params : {
@@ -11,12 +11,9 @@ const page:React.FC<Params> = ({params}) => {
      console.log(params.slug)
   return (
     <div className=''>
-     <ItemCard/>
-     <ItemCard/>
-     <ItemCard/>
-     <ItemCard/>
-     <ItemCard/>
-     <ItemCard/>
+      <h1>
+        {params.slug}
+      </h1>
     </div>
   )
 }

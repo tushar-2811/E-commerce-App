@@ -22,17 +22,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Toaster/>
-          <div >
-         <Header/>
-
-          <div className='flex-auto' >
+         
+          <Header/>      
           {children}
-          </div>
-
-          <div>
-           <Footer/>
-          </div>
-        </div>
+        
+            <Footer/>
+          
+      
       </body>
     </html>
   )

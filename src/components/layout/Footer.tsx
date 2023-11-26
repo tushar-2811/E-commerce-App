@@ -1,43 +1,128 @@
+'use client'
 import Link from 'next/link'
 import React from 'react'
+import { FaFacebookF, FaTwitter, FaYoutube, FaInstagram } from "react-icons/fa";
+import Wrapper from "./Wrapper";
 import {FaSkullCrossbones} from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <footer className="pt-10 bg-base-300 text-base-content flex flex-col">
+    <footer className="bg-black text-white pt-14 pb-3">
+    <Wrapper className="flex justify-between flex-col md:flex-row gap-[50px] md:gap-0">
+        {/* LEFT START */}
+        <div className="flex gap-[50px] md:gap-[75px] lg:gap-[100px] flex-col md:flex-row">
+            {/* MENU START */}
+            <div className="hidden md:flex md:flex-col md:gap-3 md:shrink-0">
+                <div className="font-oswald font-medium uppercase text-sm  hover:text-purple-500 cursor-pointer">
+                    Find a store
+                </div>
+                <div className="font-oswald font-medium uppercase text-sm   hover:text-purple-500 cursor-pointer">
+                    become a partner
+                </div>
+                <div className="font-oswald font-medium uppercase text-sm  hover:text-purple-500 cursor-pointer">
+                    sign up for email
+                </div>
+                <div className="font-oswald font-medium uppercase text-sm  hover:text-purple-500 cursor-pointer">
+                    send us feedback
+                </div>
+                <div className="font-oswald font-medium uppercase text-sm  hover:text-purple-500 cursor-pointer">
+                    student discount
+                </div>
+            </div>
+            {/* MENU END */}
 
-     <div className='flex justify-around'>
-      <nav className='flex flex-col'>
-      <header className="footer-title text-purple-500">Services</header>     
-      <Link href={"/"} className="link link-hover">Marketing</Link>
-      <Link href={"/"} className="link link-hover">Advertisement</Link>
-    </nav> 
-    <nav className='flex flex-col '>
-      <header className="footer-title text-purple-500">Company</header> 
-      <Link href={"/"} className="link link-hover">About us</Link>
-      <Link href={"/"} className="link link-hover">Contact</Link>
-      
-    </nav> 
-    <nav>
-      <header className="footer-title flex text-purple-500">Social</header> 
-      <div className="flex gap-4">
-       <div className='hover:bg-neutral-200 rounded-full ' >
-       <Link href={"/"}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current hover:text-purple-500"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></Link>
-       </div>
-       <div className='hover:bg-neutral-200 rounded-full '>
-       <Link href={"/"}><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current hover:text-purple-500"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></Link>
-       </div>
-      </div>
-    </nav>
-      </div>
-          
-      <div className='flex justify-center'> 
-        <h1 className='text-xl font-mono flex mt-4 items-center'> Created By Tushar <FaSkullCrossbones/>  </h1>
-      </div>
-   
+            {/* NORMAL MENU START */}
+            <div className="flex justify-center gap-[50px] md:gap-[75px] lg:gap-[100px] shrink-0">
+                {/* MENU START */}
+                <div className="flex flex-col gap-3">
+                    <div className="font-oswald font-medium text-sm">
+                        Get <span className='text-purple-500' >Help</span>
+                    </div>
+                
+                    <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                        Delivery
+                    </div>
+                    <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                        Returns
+                    </div>
+                    <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                        Contact Us
+                    </div>
+                </div>
+                {/* MENU END */}
 
-   
-  </footer>
+                {/* MENU START */}
+                <div className="flex flex-col gap-3 ">
+                    <div className="font-oswald font-medium  text-sm">
+                        About <span className='text-purple-500' >GenZ</span>
+                    </div>
+                   
+                    <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                        Careers
+                    </div>
+                    <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                        Investors
+                    </div>
+                    <div className="text-sm text-white/[0.5] hover:text-white cursor-pointer">
+                        Sustainability
+                    </div>
+                </div>
+                {/* MENU END */}
+            </div>
+            {/* NORMAL MENU END */}
+        </div>
+        {/* LEFT END */}
+
+        {/* RIGHT START */}
+        <div className="flex gap-4 justify-center md:justify-start">
+            <div
+                onClick={() =>
+                    window.open("https://facebook.com", "_blank")
+                }
+                className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black  hover:text-purple-500 cursor-pointer"
+            >
+                <FaFacebookF size={20} />
+            </div>
+            <Link
+                href="https://twitter.com"
+                className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black  hover:text-purple-500 cursor-pointer"
+            >
+                <FaTwitter size={20} />
+            </Link>
+            <div className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black  hover:text-purple-500 cursor-pointer">
+                <FaYoutube size={20} />
+            </div>
+            <div className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-black  hover:text-purple-500 cursor-pointer">
+                <FaInstagram size={20} />
+            </div>
+        </div>
+        {/* RIGHT END */}
+    </Wrapper>
+    <Wrapper className="flex justify-between mt-10 flex-col md:flex-row gap-[10px] md:gap-0">
+        {/* LEFT START */}
+        <div className="text-[12px] text-white/[0.5] hover:text-white flex justify-center items-center gap-1 cursor-pointer text-center md:text-left">
+            © Made By Tushar <FaSkullCrossbones />
+        </div>
+        {/* LEFT END */}
+
+        {/* RIGHT START */}
+        <div className="flex gap-2 md:gap-5 text-center md:text-left flex-wrap justify-center">
+            <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
+                Guides
+            </div>
+            <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
+                Terms of Sale
+            </div>
+            <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
+                Terms of Use
+            </div>
+            <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
+                Privacy Policy
+            </div>
+        </div>
+        {/* RIGHT END */}
+    </Wrapper>
+</footer>
   )
 }
 
