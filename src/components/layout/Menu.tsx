@@ -26,17 +26,17 @@ const MenuItems = [
 const subMenuData = [
   {
     name : "Shoes",
-    url : ""
+    url : "/category/Shoes"
   },
   {
     name : "Jeans",
-    url : ""
+    url : "/category/Jeans"
   },{
     name : "Watches",
-    url : ""
+    url : "/category/Watches"
   },{
     name : "Jackets",
-    url : ""
+    url : "/category/Jackets"
   },
 ]
 
@@ -64,8 +64,9 @@ const Menu = ({showCatMenu , setShowCatMenu} : {showCatMenu:any , setShowCatMenu
                         <ul className='bg-white absolute top-6 left-0 min-w-[250px] px-1 py-1 text-black shadow-lg' >
                           {subMenuData.map((subitem) => {
                             return (
-                                <Link key={subitem.name} href={subitem.url} onClick={() => showCatMenu(false)} >
-                                  <li className='h-12 flex justify-between items-center px-3 hover:bg-black/[0.03] rounded-md'>
+                                <Link key={subitem.name} href={subitem.url} >
+                                  <li 
+                                  className='h-12 flex justify-between items-center px-3 hover:bg-black/[0.03] rounded-md'>
                                 {subitem.name}
                                 <span className='opacity-50 text-sm' >10</span>
                                   </li>

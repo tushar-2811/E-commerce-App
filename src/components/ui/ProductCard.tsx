@@ -5,8 +5,8 @@ import Product1 from '@/assets/product-1.jpg'
 
 const ProductCard = () => {
   return (
-   <Link className='cursor-pointer trnasform rounded-2xl overflow-hidden bg-white duration-200 hover:scale-105 '
-    href={"/product"}>
+   <Link className='cursor-pointer transform rounded-2xl overflow-hidden bg-white duration-200 hover:scale-105 '
+    href={`/category/Shoes/1`}>
     <Image src={Product1} alt='Product-image' className='w-full' />
 
     <div className='p-4 bg-black text-white/[0.9]' >
