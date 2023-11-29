@@ -48,7 +48,11 @@ const Header = () => {
                 flex justify-center items-center hover:bg-black/[0.05] 
                 relative'>
 
+                    <Link href="/cart">
                     <BsCart className="text-[15px] md:text-[20px]" />
+                    </Link>
+
+                   
                     <div className='h-[14px] md:h-[18px] min-w-[12px] md:min-w-[18px] 
                     rounded-full bg-red-600 absolute top-1 left-5 md:left-7
                      text-white text-[10px] md:text-[12px] flex justify-center 
